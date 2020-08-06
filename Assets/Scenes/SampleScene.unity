@@ -112,6 +112,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &59604278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 97e2de62c5ae5a34685794b16b1b7fcf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1845741332}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &59604280
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59604278}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,12 +194,56 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170076733}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 55.94, y: 27.9, z: -98.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1529700120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1529700121}
+  - component: {fileID: 1529700122}
+  m_Layer: 0
+  m_Name: PointWhenSpawnSea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1529700121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529700120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1529700122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529700120}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1573267873
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +255,7 @@ GameObject:
   - component: {fileID: 1573267876}
   - component: {fileID: 1573267875}
   - component: {fileID: 1573267874}
+  - component: {fileID: 1573267877}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -233,7 +297,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -256,67 +320,124 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573267873}
-  m_LocalRotation: {x: 0.46097437, y: 0, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 0, y: 53.8, z: 0}
+  m_LocalRotation: {x: 0.3537197, y: 0, z: 0, w: 0.93535155}
+  m_LocalPosition: {x: 0, y: 35, z: -75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 54.9, y: 0, z: 0}
---- !u!1001 &1954872955
+  m_LocalEulerAnglesHint: {x: 41.43, y: 0, z: 0}
+--- !u!114 &1573267877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573267873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca410f383888194e940f4770184783a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SeaSpawn: {fileID: 1953778233}
+  PointToSeaSpawn: {fileID: 1529700121}
+  Sea: {fileID: 59604278}
+--- !u!1001 &1845741332
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 100000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 100004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_Name
-      value: Water
+      value: sea
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 78
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 148
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ea8d0068702b149488adeac0c93cba5d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
+--- !u!1 &1953778232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1953778233}
+  m_Layer: 0
+  m_Name: SeaSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1953778233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953778232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 253}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
