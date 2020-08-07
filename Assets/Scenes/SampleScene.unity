@@ -129,7 +129,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 1, z: 5}
+  m_Size: {x: 11, y: 6.25, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &170076733
 GameObject:
@@ -210,6 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1529700121}
   - component: {fileID: 1529700122}
+  - component: {fileID: 1529700123}
   m_Layer: 0
   m_Name: PointWhenSpawnSea
   m_TagString: Untagged
@@ -239,11 +240,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529700120}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 100, y: 100, z: 100}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1529700123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529700120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d31475db9993347baf8d715ea19c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1573267873
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,9 +352,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca410f383888194e940f4770184783a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeaSpawn: {fileID: 1953778233}
-  PointToSeaSpawn: {fileID: 1529700121}
+  SeaSpawn: {fileID: 1953778232}
   Sea: {fileID: 59604278}
+  SeaPrefab: {fileID: 100004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
+  GameSpeed: 5
 --- !u!1001 &1845741332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -352,6 +366,10 @@ PrefabInstance:
     - target: {fileID: 100004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_Name
       value: sea
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
+      propertyPath: m_TagString
+      value: Sea
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 97e2de62c5ae5a34685794b16b1b7fcf, type: 3}
       propertyPath: m_LocalPosition.x

@@ -6,21 +6,13 @@ public class MouveLandshavt : MonoBehaviour
 {
 
     public GameObject SeaSpawn;
-    public Transform PointToSeaSpawn;
     public GameObject Sea;
+    public GameObject SeaPrefab;
+    public int GameSpeed;
 
     void Update()
     {
-        Sea.transform.Translate(Vector3.back * Time.deltaTime);
-    }
-    
-    private void OnCollisionEnter(Collision Sea)
-    {
-        SpawnSea();
+        Sea.transform.Translate(Vector3.back * Time.deltaTime * GameSpeed);
     }
 
-    public void SpawnSea()
-    {
-        Instantiate(Sea, SeaSpawn.transform.position , Quaternion.identity);
-    }
 }
